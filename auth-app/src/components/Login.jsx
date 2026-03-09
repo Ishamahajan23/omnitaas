@@ -20,6 +20,7 @@ const Login = () => {
            if(data.success){
             alert("Login successful");
             localStorage.setItem("accessToken", data.accessToken);
+            
             navigate('/dashboard')
            }else{
             alert("Login failed");
@@ -35,7 +36,7 @@ const Login = () => {
 
         <form action="" onSubmit={handleSubmit}>
             <h1>Login</h1>
-            <input type="text" placeholder='Enter username'  name="username" onClick={(e)=>setUsername(e.target.value)} />
+            <input type="text" placeholder='Enter username'  name="username" onClick={(e)=>setUsername(e.target.value)}  />
             <input type="password" placeholder='Enter password'  name="password" onClick={(e)=>setPassword(e.target.value)} />
             <button type="submit">Login</button>
 
